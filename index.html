@@ -5,19 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/style.css">
     <title>To Do List | Vue</title>
 </head>
 <body>
     <div id="app">
-        <h1 id="title">TO DO LIST</h1>
-        <hr class="top-hr">
-
+        <header id="header">
+            <h1 id="title">TO DO LIST</h1>
+            <!-- <div id="add-btn"><i id="plus-icon" class="fa-regular fa-square-plus"></i></div> -->
+        </header>
+        
         <div class="container">
+            <div class="flex input-container">
+                <input id="add-text" placeholder="Aggiungi cose da fare (povero te)" type="text">
+                <div class="plus"><i id="plus-icon" class="fa-solid fa-square-plus"></i></div>
+            </div>
+            
             <ul>
                 <li v-for="item in toDoItems">
-                    <h5 v-if="!item.done">{{item.text}}</h5>
-                    <h5 v-else class="txt-decoration">{{item.text}}</h5>
+                    <h5 class="to-do-item" v-if="!item.done">{{item.text}}</h5>
+                    <h5 class="txt-decoration to-do-item" v-else>{{item.text}}</h5>
                 </li>
             </ul>
         </div>

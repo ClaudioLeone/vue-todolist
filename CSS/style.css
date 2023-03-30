@@ -5,29 +5,63 @@
 }
 
 body{
+    font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
-    background-color: aliceblue;
+    background-color: #fcffed;
 }
 
 .flex{
     display: flex;
 }
 
-#title{
-    margin: 20px auto;
+#header{
+    position: relative;
 }
 
-.top-hr{
-    width: 70%;
-    margin: 0 auto;
-    border: 1px solid #3c3c3c;
+#title{
+    padding: 25px 0 25px 0;
+    border-bottom: 1px solid #3c3c3c;
+}
+
+/* #add-btn{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+} */
+
+#add-text{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 0.8rem;
+    font-style: italic;
+    height: 2rem;
+    width: 60%;
+}
+
+#plus-icon{
+    font-size: 2rem;
+}
+
+.plus{
+    cursor: pointer;
+    height: 28px;
+    color: green;
+}
+
+.input-container{
+    margin: 25px 0 10px 0;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container{
     text-align: left;
     padding-left: 25px;
     margin: 20px 5rem;
-    border: 1px solid #3c3c3c;
+}
+
+.to-do-item{
+    border-bottom: 1px solid #3c3c3c;
+    padding: 10px 0;
 }
 
 .txt-decoration{
