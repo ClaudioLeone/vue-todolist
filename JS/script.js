@@ -1,6 +1,6 @@
-const {createApp} = Vue;
+const { createApp } = Vue;
 
-createApp ({
+createApp({
     data() {
         return {
             addBar: true,
@@ -25,26 +25,21 @@ createApp ({
     },
 
     methods: {
-        // addBarToogle() {
-        //     if (this.addBar === false) {
-        //         this.addBar = true;
-        //     }
-        //     else {
-        //         this.addBar = false;
-        //     }
-        // }
-
         addToDo() {
             if (this.newToDo === "") {
                 return;
             }
             else {
-                this.return = this.toDoItems.unshift({text: this.newToDo, done: false});
-                console.log("ADD");
+                this.return = this.toDoItems.unshift({ text: this.newToDo, done: false, id: this.newToDo });
+                this.newToDo = "";
             }
         },
 
-        autoDeleteToDo() {
+        deleteToDo(object) {
+            this.toDoItems.splice(object, 1);
+        },
+
+        deleteLine() {
             if ((this.newToDo !== "")) {
                 this.newToDo = "";
             }
