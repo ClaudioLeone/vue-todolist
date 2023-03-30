@@ -21,8 +21,8 @@
         
         <div class="container">
             <div class="flex input-container">
-                <input id="add-text" placeholder="Aggiungi cose da fare (povero te)" type="text">
-                <div class="plus"><i id="plus-icon" class="fa-solid fa-square-plus"></i></div>
+                <input v-model="newToDo" id="add-text" placeholder="Aggiungi cose da fare (povero te)" type="text">
+                <div @click="addToDo" class="plus"><i id="plus-icon" class="fa-solid fa-square-plus"></i></div>
             </div>
             
             <ul>

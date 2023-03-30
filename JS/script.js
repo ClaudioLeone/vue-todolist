@@ -3,6 +3,10 @@ const {createApp} = Vue;
 createApp ({
     data() {
         return {
+            // addBar: false,
+            newToDo: "",
+
+
             toDoItems: [
                 {
                     text: "Lavare i piatti",
@@ -17,6 +21,22 @@ createApp ({
                     done: false
                 }
             ]
+        }
+    },
+
+    methods: {
+        // addBarToogle() {
+        //     if (this.addBar === false) {
+        //         this.addBar = true;
+        //     }
+        //     else {
+        //         this.addBar = false;
+        //     }
+        // }
+
+        addToDo() {
+
+            this.return = this.toDoItems.unshift({text: this.newToDo, done: false})
         }
     }
 }).mount("#app")

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 body{
@@ -38,13 +39,14 @@ body{
 }
 
 #plus-icon{
+    cursor: cell;
     font-size: 2rem;
 }
 
 .plus{
-    cursor: pointer;
+    
     height: 28px;
-    color: green;
+    color: #3df83d;
 }
 
 .input-container{
