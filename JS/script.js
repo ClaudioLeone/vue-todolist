@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            addBar: true,
+            isContent: true,
             newToDo: "",
 
 
@@ -11,6 +11,7 @@ createApp({
                 {
                     text: "Lavare i piatti",
                     done: false
+
                 },
                 {
                     text: "Fare il caffè",

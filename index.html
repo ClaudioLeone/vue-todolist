@@ -28,12 +28,16 @@
             </div>
             
             <div class="container">
-                <ul>
+                <ul v-if="isContent, toDoItems.length > 0">
                     <li v-for="item in toDoItems">
                         <h5 class="to-do-item" v-if="!item.done">{{item.text}}<i @click="deleteToDo" id="deleteIcon" class="fa-regular fa-circle-xmark fa-lg"></i></h5>
                         <h5 class="txt-decoration to-do-item" v-else>{{item.text}}</h5>
                     </li>
                 </ul>
+                
+                <div v-else class="flex empty-div">
+                    <h2 id="nothing-todo">NIENTE DA FARE</h2>
+                </div>
             </div>
         </div>
     </div>
