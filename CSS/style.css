@@ -3,3 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.flex{
+    display: flex;
+}
+
+#title{
+    margin: 20px auto;
+}
+
+.top-hr{
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #3c3c3c;
+}
+
+.container{
+    margin: 20px 5rem;
+    border: 1px solid #3c3c3c;
+}
