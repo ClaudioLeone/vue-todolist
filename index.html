@@ -13,8 +13,13 @@
         <h1 id="title">TO DO LIST</h1>
         <hr class="top-hr">
 
-        <div class="container flex">
-
+        <div class="container">
+            <ul>
+                <li v-for="item in toDoItems">
+                    <h5 v-if="!item.done">{{item.text}}</h5>
+                    <h5 v-else class="txt-decoration">{{item.text}}</h5>
+                </li>
+            </ul>
         </div>
     </div>
 

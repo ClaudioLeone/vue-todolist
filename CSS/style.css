@@ -24,6 +24,12 @@ body{
 }
 
 .container{
+    text-align: left;
+    padding-left: 25px;
     margin: 20px 5rem;
     border: 1px solid #3c3c3c;
+}
+
+.txt-decoration{
+    text-decoration: line-through;
 }
