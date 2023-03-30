@@ -11,6 +11,15 @@ body{
     background-color: #fcffed;
 }
 
+.all-content-container{
+    width: 100%;
+    height: 100vh;
+}
+
+li{
+    position: relative;
+}
+
 .flex{
     display: flex;
 }
@@ -30,12 +39,23 @@ body{
     right: 20px;
 } */
 
+#deleteIcon{
+    color: #9b0000;
+    position: absolute;
+    right: 5px;
+    top: 24px;
+}
+
 #add-text{
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 0.8rem;
     font-style: italic;
+    padding-left: 10px;
     height: 2rem;
-    width: 60%;
+    width: 70%;
+    cursor: text;
+    border-radius: 8px;
+    border: 1px solid #3c3c3c;
 }
 
 #plus-icon{
@@ -50,7 +70,8 @@ body{
 }
 
 .input-container{
-    margin: 25px 0 10px 0;
+    width: 100%;
+    padding: 25px 0 10px 0;
     align-items: center;
     justify-content: space-between;
 }

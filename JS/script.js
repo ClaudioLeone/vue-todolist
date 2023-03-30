@@ -3,7 +3,7 @@ const {createApp} = Vue;
 createApp ({
     data() {
         return {
-            // addBar: false,
+            addBar: true,
             newToDo: "",
 
 
@@ -35,8 +35,19 @@ createApp ({
         // }
 
         addToDo() {
+            if (this.newToDo === "") {
+                return;
+            }
+            else {
+                this.return = this.toDoItems.unshift({text: this.newToDo, done: false});
+                console.log("ADD");
+            }
+        },
 
-            this.return = this.toDoItems.unshift({text: this.newToDo, done: false})
+        autoDeleteToDo() {
+            if ((this.newToDo !== "")) {
+                this.newToDo = "";
+            }
         }
     }
 }).mount("#app")

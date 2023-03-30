@@ -19,18 +19,22 @@
             <!-- <div id="add-btn"><i id="plus-icon" class="fa-regular fa-square-plus"></i></div> -->
         </header>
         
-        <div class="container">
-            <div class="flex input-container">
-                <input v-model="newToDo" id="add-text" placeholder="Aggiungi cose da fare (povero te)" type="text">
-                <div @click="addToDo" class="plus"><i id="plus-icon" class="fa-solid fa-square-plus"></i></div>
+        <div class="all-content-container">
+            <div class="container">
+                <div class="flex input-container">
+                    <input @keyup.esc="autoDeleteToDo" v-model="newToDo" id="add-text" placeholder="Aggiungi (premi freccia sx per eliminare la riga)" type="text">
+                    <div @click="addToDo" class="plus"><i id="plus-icon" class="fa-solid fa-square-plus"></i></div>
+                </div>
             </div>
             
-            <ul>
-                <li v-for="item in toDoItems">
-                    <h5 class="to-do-item" v-if="!item.done">{{item.text}}</h5>
-                    <h5 class="txt-decoration to-do-item" v-else>{{item.text}}</h5>
-                </li>
-            </ul>
+            <div class="container">    
+                <ul>
+                    <li v-for="item in toDoItems">
+                        <h5 class="to-do-item" v-if="!item.done">{{item.text}}<i  id="deleteIcon" class="fa-regular fa-circle-xmark fa-lg"></i></h5>
+                        <h5 class="txt-decoration to-do-item" v-else>{{item.text}}</h5>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
